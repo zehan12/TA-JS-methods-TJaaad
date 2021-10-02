@@ -32,13 +32,101 @@ Example:
    - `charAt` accepts a index (number data type) and return the character on that index in the string.
 
 2. `toUpperCase`
+
+   - Parameter: none
+   - Return: return string in uppercase
+   - Example:
+     ```js
+     let name = 'Arya Stark';
+     name.toUpperCase(); //"ARYA STARK"
+     let sentance = 'A quick brown fox jumped over a lazy dog';
+     sentance.toUpperCase(); // "A QUICK BROWN FOX JUMPED OVER A LAZY DOG"
+     let houseName = 'Starks';
+     houseName.toUpperCase(); // "STARK"
+     ```
+   - `toUpperCase` doesn't take a parameter and return the string into uppercase.
+
+ 
+
 3. `toLowerCase`
+
+   - Parameter: none
+   - Return: return string in lowercase
+   - Example:
+     ```js
+     let name = 'ARYA STARK';
+     name.toLowerCase(); //"arya stark"
+     let sentance = 'A QUICK BROWN FOX JUMPED OVER A LAZY DOG';
+     sentance.toLowerCase(); // "A quick brown fox jumped over a lazy dog"
+     let houseName = 'STARKS';
+     houseName.toLowerCase(); // "stark"
+     ```
+   - `toLowerCase` doesn't take a parameter and return the string into lowercase.
+
 4. `trim`
+
+   - Parameter: none
+   - Return: remove space from both the side
+   - Example:
+     ```js
+     let name = '   Arya Stark   ';
+     name.trim(); //"Arya Stark"
+     let sentance = '    Hello World   ';
+     sentance.trim(); // "Hello World"
+     let houseName = '  Starks  ';
+     houseName.trim(); // "stark"
+     ```
+   - `trim`  doesn't take a parameter and return the string into uppercase.
+
+
 5. `trimEnd`
+
+   - Parameter: none
+   - Return: string remove space from end
+   - Example:
+     ```js
+     let name = 'Arya Stark';
+     name.trimEnd(); //"   Arya Stark    "
+     let sentance = '   dog   ';
+     sentance.trimEnd(); // "    dog"
+     let houseName = '   Starks   ';
+     houseName.trimEnd(); // "   Stark"
+     ```
+   - `trimEnd` does't accept the 
+
 6. `trimStart`
 7. `concat`
+
+   - Parameter: (index) defaults to 0 - (number data type)
+   - Return: character at specific index in the string (string data type)
+   - Example:
+     ```js
+     let name = 'Arya Stark';
+     name.charAt(2); //"y"
+     let sentance = 'A quick brown fox jumped over a lazy dog';
+     sentance(4); // "i"
+     let houseName = 'Starks';
+     houseName.charAt(0); // "S"
+     ```
+   - `charAt` accepts a index (number data type) and return the character on that index in the string.
+
+
 8. `endsWith`
 9. `includes`
+
+   - Parameter: (index) defaults to 0 - (number data type)
+   - Return: character at specific index in the string (string data type)
+   - Example:
+     ```js
+     let name = 'Arya Stark';
+     name.includes(Arya); //true
+     let sentance = 'A quick brown fox jumped over a lazy dog';
+     sentance.includes(lazy); //false
+     let houseName = 'Starks';
+     houseName.charAt(0); // "S"
+     ```
+   - `charAt` accepts a index (number data type) and return the character on that index in the string.
+
 10. `indexOf`
 11. `lastIndexOf`
 12. `padEnd`
