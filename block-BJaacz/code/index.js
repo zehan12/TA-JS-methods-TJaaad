@@ -464,7 +464,9 @@ filter is a higher order function.
     console.log(filter(grade, isGradeC));
 */
 
-function filter( arr ,  )
+function filter( arr , cb ){
+    return cb(arr) ;
+}
 
 /*
   Create a function named multiplyBy which accepts:
