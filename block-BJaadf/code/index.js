@@ -150,8 +150,8 @@ let doubleNumbers = numbersThree.map(double);
 // Create a new variable named tripleNumbers that store the numberThree array (each element should be multiplied by 3). Use map
 
 
-let doubleNumbers = numbersThree.map( x => x * 2 );
-console.log(doubleNumbers)
+let doubleNumbers = numbersThree.map( num => num * 2 );
+console.log(doubleNumbers);
 
 function double(numbersThree){
     return numbersThree * 2 ;
@@ -161,13 +161,19 @@ let doubleNumbers = numbersThree.map(double);
 
 // Create a new variable named halfNumbers that store the numberThree array (each element should be divided by 2). Use map
 
+let halfNumbers = numbersThree.map( num => num / 2 );
+console.log(halfNumbers);
+
 // Create a new variable named oddNumbers that store all the odd numbers in numbersThree array
 
-let oddNumbers = [];
-
+let oddNumbers = numbersThree.map( num => num % 2 != 0 );
+console.log(oddNumbers);
 
 
 // Create a new variable named evenNumbers that store all the even numbers in numbersThree array
+
+let evenNumbers = numbersThree.map( num => num % 2 === 0 );
+console.log(evenNumbers);
 
 // Find the index of 10 in numbersThree array
 
@@ -182,5 +188,8 @@ numbersThree.reverse();
 numbersTwo.reverse();
 
 // Join all fruits with '-', convert to uppercase and log it
+
+fruits.join("-");
+console.log(fruits.toLowerCase());
 
 // Join all fruits with '&', convert to lowercase and log it
