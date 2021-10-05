@@ -36,11 +36,10 @@ let fitlterPeople = persons.filter((v) =>{
   }
 })
 
-//! Refactor 
+//! Refactor
 function fitlterPeople(array){
   array.filter((v)=> v.name.startsWith("J") || v.name.startsWith("P"))
 }
-
 fitlterPeople(persons);
 
 // Log the length of filtered named of people in peopleName that starts with 'A' and 'C'
@@ -75,6 +74,7 @@ let femalePersons = persons.filter((v) => {
 })
 
 //! REFACTOR
+
 let femalePersons = persons.filter((v) => v.sex === "F");
 
 let femalePersons = (array) => array.filter((v) => v.sex === "F");
@@ -107,6 +107,7 @@ let evenGrade = persons.filter((v) =>{
 })
 
 //! REFACTOR 
+
 let evenGrade = persons.filter((v) => v.grade % 2 === 0);
 
 // Find the first name that starts with 'J' in persons array and log the object
@@ -135,6 +136,15 @@ console.log(firstNameP);
 
 // Find the first name that starts with 'J', grade is greater than 10 and is a female
 
+let gradeGreat = 0;
+function nameWithJ(array){
+  array.forEach((v) =>{ 
+    if ( v.name.startsWith("J") && gradeGreat < v.grade  ){
+         gradeGreat = v.grade
+    }
+  })
+  console.log(gradeGreat);
+}
 
 
 // Filter all the female from persons array and store in femalePersons array
