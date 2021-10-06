@@ -91,7 +91,6 @@ let femaleName = persons.filter((v) => {
   }
 })
 
-
 //! REFACTOR
 let femaleName = persons.filter((v) => (v.name.startsWith("J") || v.name.startsWith("C")) &&  v.sex === "F");
 
@@ -182,9 +181,11 @@ function avgGradeOfMale(array){
   array.forEach((v)=>{
     if ( v.sex === "M" ){
     sum = sum + v.grade;
-  }})
-   avg = sum / array.length;
-   return avg
+  }
+   }
+    )
+     avg = sum / array.length;
+      return avg
 }
 
 // Find the average grade of female
