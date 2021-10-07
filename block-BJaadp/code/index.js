@@ -17,17 +17,140 @@ let persons = [
 
 // Find the average grade
 
+let average = persons.reduce((acc,v)=>{
+   return acc + v.grade
+},0) / persons.length;
+console.log(parseInt(average));
+
 // Find the average grade of male
+
+const averageOfMale = (array) => array.reduce((acc,v)=> v.sex === "M" ? acc + v.grade : acc,0) / array.length
+
+function averageOfMale(array){
+  let result = array.reduce((acc,v)=>{
+    if ( v.sex === "M" ){
+      acc.sum += v.grade
+      acc.maleCount += 1
+    }
+      return acc
+  },{sum:0,maleCount:0}) 
+ 
+  return result.sum / result.maleCount;
+}
+
+//*? forEach Method
+
+function averageOfMale(array){
+  let sum = 0,count = 0
+
+  array.forEach(v => {
+    if ( v.sex === "M" ){
+      sum += v.grade
+      count += 1
+    }  
+  });
+  let avg = sum / count
+  return avg.toFixed(2)
+}
 
 // Find the average grade of female
 
+//*? forEach Method
+
+function averageOfMale(array){
+  let sum = 0;
+  let avg;
+  array.forEach(v => {
+    if ( v.sex === "M" ){
+      sum += v.grade
+    }  
+    avg = sum / array.length
+  });
+  return avg.toFixed(2)
+}
+
 // Find the highest grade
+
+
+function highestGrade(array){
+  let result = array.reduce((acc,v)=>{
+      if ( acc < v.grade ){
+        acc = v.grade
+      }
+      return acc
+  },0)
+    return result
+}
+
+//*? forEach
+
+
+function highestGrade(array){
+  let highest = 0;
+  array.forEach((v)=>{
+    if ( highest < v.grade ){
+        highest = v.grade 
+    }
+  })
+  return highest
+}
+
 
 // Find the highest grade in male
 
+function highestGradeOfMale(array){
+  let result = array.reduce((acc,v)=>{
+      if ( v.sex === "M" &&  acc < v.grade ){
+        acc = v.grade
+      }
+      return acc
+  },0)
+    return result
+}
+
+//*? forEach
+
+let highest = 0;
+function highestGradeMale(array){
+    array.forEach((v)=>{
+      if ( v.sex === "M" ){
+        if ( highest < v.grade ){
+          highest = v.grade
+        }
+      }
+     }
+    )
+    console.log(highest)
+  }
+
 // Find the highest grade in female
 
+
+//*? forEach
+
+function highestGradeMale(array){
+  array.forEach((v)=>{
+    if ( v.sex === "F" ){
+      if ( highest < v.grade ){
+        highest = v.grade
+      }
+    }
+   }
+  )
+  console.log(highest)
+}
+
 // Find the highest grade for people whose name starts with 'J' or 'P'
+
+function highestGradeJP(array){
+  let result = array.reduce((acc,v)=>{
+    if ( v.name.startsWith("J") || v.name.startWith("P") && acc < v.grade ){
+        acc = v.grade
+  }
+      return acc
+},0)
+    return result;
+}
 
 const fruitBasket = [
   'banana',
@@ -52,6 +175,25 @@ Output:
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
 */
 
+let fruitsObj = {};
+
+function fruitBasket(array){
+  let result = array.reduce((v) => {
+    if ( firutsObj[v] == undefined ){
+          fruitsObj[v] = 1
+    } else {
+          fruitsObj[v] += 1;
+    }
+    
+},0)
+      return fruitsObj
+}
+
+//*? 
+
+
+
+
 /* 
 
 Use the fruitBasket array to create an array of array. Each array will contain two values name of fruit and number of times
@@ -62,6 +204,8 @@ Output:
 [['banana', 2], ['cherry', 3], ['orange', 3], ['apple', 2], ['fig', 1]]
 */
 
+
+
 const data = [
   [1, 2, 3],
   [4, 5, 6],
@@ -70,6 +214,17 @@ const data = [
 ];
 
 // Using reduce flat data array
+
+data.reduce((pv,cv)=> pv.concat(cv),[]);
+
+//*? forEach
+let newData;
+function flatThe(array){
+  array.forEach((v)=>{
+    newData = array.flat(Infinity);
+  })
+    return newData;
+}
 
 const dataTwo = [
   [1, 2, 3],
@@ -80,6 +235,17 @@ const dataTwo = [
 
 // Using reduce flat dataTwo array
 
+dataTwo.reduce((pv,cv)=> pv.concat(cv),[]);
+
+//*? forEach
+let newData;
+function flatThe(array){
+  array.forEach((v)=>{
+    newData = array.flat(Infinity);
+  })
+    return newData;
+}
+
 /*
 
 Create these functions which accepts a number value and returns a number value:
@@ -89,6 +255,13 @@ Create these functions which accepts a number value and returns a number value:
   - `triple` triples the input 
   - `half` converts the value to half and return the integer value not decimal (use Math.round(21.5) => 21)
 */
+
+function operation(number){
+  let result = pipeline.forEach((v)=>{
+      
+  })
+}
+
 
 let pipeline = [
   increment,
@@ -115,6 +288,8 @@ EXAMPLE:
   ...
 */
 
+
+
 let pipeline2 = [
   increment,
   half,
@@ -130,3 +305,4 @@ let pipeline2 = [
 ];
 
 // Find the output using pipeline2 the initial value if 8
+
