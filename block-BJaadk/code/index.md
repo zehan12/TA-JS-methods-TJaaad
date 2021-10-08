@@ -3,6 +3,7 @@ For the given code below you have to draw the diagram of how these things are wo
 - Keep the images in the `img` folder
 - using the `![](./img/imagename.png)` add images below each code snippet
 
+1
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function double(num) {
@@ -12,7 +13,7 @@ let doubleNum = numbers.forEach(double);
 ```
 ![](./img/main.png)
 
-
+2
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function double(num) {
@@ -21,6 +22,7 @@ function double(num) {
 let doubleNum = numbers.forEach(double);
 ```
 
+3
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function double(num) {
@@ -29,6 +31,7 @@ function double(num) {
 let doubleNum = numbers.forEach(double);
 ```
 
+4
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function double(num) {
@@ -37,6 +40,7 @@ function double(num) {
 let doubleNumbers = numbers.map(double);
 ```
 
+5
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function addTwo(num) {
@@ -45,6 +49,7 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+6
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function addTwo(num) {
@@ -53,6 +58,7 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+7
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function addTwo(num) {
@@ -61,6 +67,7 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+8
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function isOdd(num) {
@@ -69,6 +76,7 @@ function isOdd(num) {
 let oddNumbers = numbers.filter(isOdd);
 ```
 
+9
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function test(num) {
@@ -77,6 +85,7 @@ function test(num) {
 let filteredNumbers = numbers.filter(test);
 ```
 
+10
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function test(num) {
@@ -85,6 +94,7 @@ function test(num) {
 let filteredNumbers = numbers.filter(test);
 ```
 
+11
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function add(accumulator, currentValue) {
@@ -93,6 +103,7 @@ function add(accumulator, currentValue) {
 let sum = numbers.reduce(add);
 ```
 
+12
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function add(accumulator, currentValue) {
