@@ -2,22 +2,56 @@
 
 function countAllPeople() {
   // your code goes here
+  got.houses.reduce((acc,v)=>{
+        acc += v.people.length
+  },0)
 }
 
 function peopleByHouses() {
   // your code goes here
+  got.houses.reduce((acc,v)=>{
+        acc[v.name] = v.people.length
+    
+  },{})
 }
 
 function everyone() {
   // your code goes here
+  return got.houses.reduce((acc,v)=>{
+    acc.push(v.people.filter((e)=> {
+           acc.push(e.name)
+         
+    }))
+    
+      return acc
+  },[])
 }
 
 function nameWithS() {
   // your code goes here
+  let every = got.houses.reduce((acc,v)=>{
+    v.people.forEach( e =>{
+      if ( e.name.toLowerCase().includes("s") ){
+        acc.push(e.name)
+      }
+    })
+    return acc
+  },[])
+    return every;
 }
 
 function nameWithA() {
   // your code goes here
+  let every = got.houses.reduce((acc,v)=>{
+    v.people.forEach( e =>{
+      if ( e.name.toLowerCase().includes("a") ){
+        acc.push(e.name)
+      }
+    })
+    return acc
+  },[])
+    return every;
+  
 }
 
 function surnameWithS() {
