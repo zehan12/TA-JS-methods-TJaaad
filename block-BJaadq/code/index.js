@@ -2,34 +2,121 @@
 
 function countAllPeople() {
   // your code goes here
+   let count = 0;
+  got.houses.forEach(v => {
+      
+  v.people.forEach((e)=>{
+        count += 1
+       
+        
+})
+  });
+  return count
 }
+
+function countAllpeople(){
+  got.houses.reduce((acc,v)=>{
+    return acc + v.people
+  })
+}
+
+countAllPeople()
 
 function peopleByHouses() {
   // your code goes here
+  let people = {}
+    got.houses.forEach((v,index)=> {
+        
+        people[v.name] = v.people.length 
+       
+  })
+  return people
 }
+peopleByHouses()
+
 
 function everyone() {
   // your code goes here
+  let every = []
+  got.houses.forEach((v)=>{
+    v.people.forEach((e)=> {
+      every.push(e.name)  
+    } )
+  })
+  return every
 }
+
+everyone();
 
 function nameWithS() {
   // your code goes here
+  let sName = []
+  got.houses.forEach((v)=>{
+    v.people.forEach((e)=>{
+        if ( e.name.startsWith("S") ){
+          sName.push(e.name)
+        }
+    })
+  })
+  return sName
 }
+
+nameWithS();
 
 function nameWithA() {
   // your code goes here
+  let aName = []
+  got.houses.forEach((v)=>{
+    v.people.forEach((e)=>{
+        if ( e.name.startsWith("A") ){
+          aName.push(e.name)
+        }
+    })
+  })
+  return aName
 }
+
+nameWithA();
 
 function surnameWithS() {
   // your code goes here
+  let sSurname = []
+  got.houses.forEach((v)=>{
+    v.people.forEach((e)=>{
+      let surName = e.name.split(" ")[1];
+      if ( surName.startsWith("S") ){
+        sSurname.push(e.name)
+      }
+    })
+  })
+  return sSurname
 }
 
 function surnameWithA() {
   // your code goes here
+  let aSurname = []
+  got.houses.forEach((v)=>{
+    v.people.forEach((e)=>{
+      let surName = e.name.split(" ")[1];
+      if ( surName.startsWith("A") ){
+        aSurname.push(e.name)
+      }
+    })
+  })
+  return aSurname
 }
+
 
 function peopleNameOfAllHouses() {
   // your code goes here
+  let everyPeople = {};
+  let houseName = [];
+  got.houses.forEach((v)=>{
+    v.people.forEach((e)=>{
+      houseName.push(v.people)
+    })    
+  })
+  return houseName
 }
 
 // Testing your result after writing your function
