@@ -77,6 +77,7 @@ console.log(num)
 // - Find longest string in strings
 
 //var strings = ['This', 'is', 'a', "jehhan",'collection', 'of', 'words'];
+//1
 function findLong(strings){
   let max="";
    for(let i=0;i<strings.length;i++){
@@ -88,6 +89,7 @@ function findLong(strings){
   return max
  }
 
+//2
  function findLong(strings){
   let first=strings[0]
    for(let i=0;i<strings.length;i++){
@@ -100,6 +102,7 @@ function findLong(strings){
    return first;
  }
 
+//3
   function findLong(aray){
   let longestString = ""
   aray.forEach(v => {
@@ -111,6 +114,7 @@ function findLong(strings){
   return longestString
   }
 
+4//
   strings.sort((a,b) => b.length - a.length)[0]
 
 // - Find all the even numbers
