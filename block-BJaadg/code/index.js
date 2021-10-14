@@ -10,11 +10,14 @@ let to = 'Arya Stark';
 
 quote.indexOf("is");
 
+let is = quote.indexOf("is");
 /*
 2. Find the character at the index indexOfIs (Problem 1) in quote.
 */
 
 quote.charAt(quote.indexOf("is"));
+
+quote.charAt(is);
 
 /*
 3. Log the message saying `The index of first is in quote is 7`
