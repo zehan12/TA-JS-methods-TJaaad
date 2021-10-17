@@ -5,7 +5,7 @@
 */
 
 function addTwo(number){
-  return number + 2
+  return number + 2 ;
 }
 
 /*
@@ -290,7 +290,7 @@ function filterAdult(people){
            newArray.push(people[i]);
          }
    } 
-   console.log(newArray)
+   console.log(newArray);
 }
 
 /*
@@ -350,7 +350,7 @@ function filterFemale(grades){
       femaleArray.push(grades[i])
     }
   }
-  console.log(femaleArray)
+  console.log(femaleArray);
 }
 
 /*
