@@ -106,9 +106,9 @@ function changeArray( arr , callback ) {
 
 
 function sendMessage( message , callback ){
-  return  callback(message) ;
+  return  callback(message),callback ;
 }
-
+//tosee
 /*
 
  Create a function named `first` that accepts an argument a function (callback) and return the same function defination.
