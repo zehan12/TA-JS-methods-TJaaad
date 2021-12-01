@@ -38,9 +38,11 @@ let fitlterPeople = persons.filter((v) =>{
 
 //! Refactor
 function fitlterPeople(array){
-  array.filter((v)=> v.name.startsWith("J") || v.name.startsWith("P"))
+  array.filter((v)=> v.name.startsWith("J") || v.name.startsWith("P"));
 }
 fitlterPeople(persons);
+
+persons.filter((v)=>v.name.charAt(0)===("J") || v.name.charAt(0) ===("P"))
 
 // Log the length of filtered named of people in peopleName that starts with 'A' and 'C'
 
