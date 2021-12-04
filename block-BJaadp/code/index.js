@@ -175,23 +175,30 @@ Output:
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
 */
 
-let fruitsObj = {};
+let fruitBasketObj = fruitBasket.reduce((acc,cv,index)=>{
+  acc[index] = cv;
+  return acc;
+},{})
 
-function fruitBasket(array){
-  let result = array.reduce((v) => {
-    if ( firutsObj[v] == undefined ){
-          fruitsObj[v] = 1
+function fruit(array){
+  let fruitObject = array.reduce((acc,v) => {
+    if ( acc[v] ){
+          acc[v] += 1
+         
     } else {
-          fruitsObj[v] += 1;
+          acc[v] = 1;
+          
     }
-    
-},0)
-      return fruitsObj
+
+    return acc
+},{})
+      return fruitObject
 }
 
-//*? 
+//*?  forEach
 
-
+let fruitObject ={}
+fruitBasket.forEach((v)=> fruitObject[v] ? fruitObject[v] += 1 : fruitObject[v] = 1 )
 
 
 /* 
@@ -256,11 +263,26 @@ Create these functions which accepts a number value and returns a number value:
   - `half` converts the value to half and return the integer value not decimal (use Math.round(21.5) => 21)
 */
 
-function operation(number){
-  let result = pipeline.forEach((v)=>{
-      
-  })
+function increment(num){
+    return num + 1;
 }
+
+function double(num){
+  return num * 2;
+}
+
+function decrement(num){
+  return num - 1;
+}
+
+function triple(num){
+  return num * 3 ;
+}
+
+function half(num){
+  return Math.round(num / 2) ;
+}
+
 
 
 let pipeline = [
@@ -288,6 +310,16 @@ EXAMPLE:
   ...
 */
 
+
+function mathOperation(pipeline){
+    let result = pipeline.reduce((acc,v)=>{
+      acc = acc(v);
+      return acc
+    },3)
+    return result;
+}
+
+pipeline.forEach((v)=> 
 
 
 let pipeline2 = [
